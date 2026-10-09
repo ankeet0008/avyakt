@@ -1,0 +1,22 @@
+.skull-svg .scene-main {
+  opacity: 0;
+  stroke: rgba(246, 217, 139, 0.7);
+}
+
+.skull-svg .scene-outline {
+  stroke: #f6d98b;
+}
+
+.skull-svg .eye {
+  transform-origin: center;
+  transform-box: fill-box;
+  filter: drop-shadow(0 0 8px rgba(255, 175, 74, 0.7));
+}
+
+.skull-svg .jaw-group,
+.skull-svg .skull-hat,
+.skull-svg .cutlasses,
+.skull-svg .face-details {
+  transform-origin: center;
+  transform-box: fill-box;
+}

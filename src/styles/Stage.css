@@ -1,0 +1,91 @@
+.stage {
+  position: relative;
+  width: clamp(17.5rem, 25vw, 20rem);
+  height: clamp(17.5rem, 25vw, 20rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: clamp(2rem, 4vw, 3rem);
+  border: 1px solid rgba(217, 164, 65, 0.38);
+  background: rgba(6, 9, 13, 0.62);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.8), inset 0 0 20px rgba(13, 26, 36, 0.8);
+  backdrop-filter: blur(3px);
+  transform: translate3d(0, 0, 0);
+  will-change: transform, opacity;
+}
+
+.scene-wrap {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: scale(0.8);
+  will-change: transform, opacity;
+}
+
+.scene-wrap.scene-skull {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.scene-svg {
+  width: 86%;
+  height: 86%;
+  overflow: visible;
+}
+
+.scene-outline,
+.gun-form,
+.gun-engraving,
+.chest-engraving,
+.chest-lock-ring,
+.chest-lock-peg,
+.chest-base,
+.chest-lid,
+.chest-lock,
+.scene-main {
+  fill: none;
+  stroke: #f6d98b;
+  stroke-width: 2.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+}
+
+.scene-outline {
+  opacity: 0;
+}
+
+.scene-main {
+  opacity: 0;
+}
+
+.stage-bracket {
+  position: absolute;
+  width: clamp(0.5rem, 1vw, 0.75rem);
+  height: clamp(0.5rem, 1vw, 0.75rem);
+  border-color: #f6d98b;
+}
+
+.bracket-tl { top: -1px; left: -1px; border-top: 2px solid #f6d98b; border-left: 2px solid #f6d98b; }
+.bracket-tr { top: -1px; right: -1px; border-top: 2px solid #f6d98b; border-right: 2px solid #f6d98b; }
+.bracket-bl { bottom: -1px; left: -1px; border-bottom: 2px solid #f6d98b; border-left: 2px solid #f6d98b; }
+.bracket-br { bottom: -1px; right: -1px; border-bottom: 2px solid #f6d98b; border-right: 2px solid #f6d98b; }
+
+.stage-crosshair {
+  position: absolute;
+  background: rgba(217, 164, 65, 0.3);
+}
+
+.stage-crosshair.horizontal { width: 1.5rem; height: 1px; }
+.stage-crosshair.vertical { width: 1px; height: 1.5rem; }
+
+@media (max-width: 640px) {
+  .stage {
+    width: min(17.5rem, 78vw);
+    height: min(17.5rem, 78vw);
+    margin-bottom: 1.75rem;
+  }
+}

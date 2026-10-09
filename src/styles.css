@@ -1,0 +1,72 @@
+* { box-sizing: border-box; }
+
+:root {
+  color: #e9dfc7;
+  background: #06090d;
+  font-family: 'Cinzel', serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  --navy: #06090d;
+  --storm: #0d1a24;
+  --gold-100: #fff7d6;
+  --gold-200: #f6d98b;
+  --gold-400: #d9a441;
+  --gold-700: #996d1b;
+  --bone: #e9dfc7;
+  --red: #8c1d18;
+}
+
+html {
+  min-height: 100%;
+  background: var(--navy);
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
+  background: var(--navy);
+  color: var(--bone);
+  user-select: none;
+}
+
+button,
+img,
+svg {
+  display: block;
+}
+
+button {
+  font: inherit;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.app-shell {
+  position: relative;
+  min-height: 100vh;
+  background: var(--navy);
+  overflow: hidden;
+}
+
+.hero {
+  position: relative;
+  z-index: 2;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: clamp(2rem, 6vw, 4rem) clamp(1.25rem, 4vw, 3rem);
+}
+
+@media (max-width: 360px) {
+  .hero {
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+  }
+}

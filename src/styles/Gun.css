@@ -1,0 +1,32 @@
+.gun-svg {
+  transform-origin: 50% 50%;
+  transform-box: fill-box;
+}
+
+.gun-svg .gun-form,
+.gun-svg .gun-engraving,
+.gun-svg .scene-main {
+  stroke: #f6d98b;
+}
+
+.gun-svg .gun-form {
+  fill: none;
+  opacity: 0;
+}
+
+.gun-svg .gun-body-shape,
+.gun-svg .gun-barrel {
+  opacity: 0;
+}
+
+.gun-svg .muzzle-flash {
+  opacity: 0;
+  transform-origin: 25% 50%;
+  transform-box: fill-box;
+}
+
+.gun-svg .shockwave {
+  opacity: 0;
+  transform-origin: 50% 50%;
+  transform-box: fill-box;
+}
